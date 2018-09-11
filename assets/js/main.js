@@ -614,7 +614,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
-                zoom: 20,
+                zoom: 15,
                 scrollwheel: false,
                 // The latitude and longitude to center the map (always required)
                 center: cntr, // New York
