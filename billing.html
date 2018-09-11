@@ -376,102 +376,110 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h1 class="module-title font-alt">Checkout</h1>
+                <h1 class="module-title font-alt">Billing</h1>
               </div>
             </div>
-            <hr class="divider-w pt-20">
-            <div class="row">
-              <div class="col-sm-12">
-                <table class="table table-striped table-border checkout-table">
-                  <tbody>
-                    <tr>
-                      <th class="hidden-xs">Item</th>
-                      <th>Description</th>
-                      <th class="hidden-xs">Price</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
-                      <th>Remove</th>
-                    </tr>
-                    <tr>
-                      <td class="hidden-xs"><a href="#"><img src="assets/images/shop/product-14.jpg" alt="Accessories Pack"/></a></td>
-                      <td>
-                        <h5 class="product-title font-alt">Dramatically Different Hydrating Jelly - CLINIQUE</h5>
-                      </td>
-                      <td class="hidden-xs">
-                        <h5 class="product-title font-alt">$28.00</h5>
-                      </td>
-                      <td>
-                        <input class="form-control" type="number" name="" value="1" max="50" min="1"/>
-                      </td>
-                      <td>
-                        <h5 class="product-title font-alt">$28.00</h5>
-                      </td>
-                      <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td class="hidden-xs"><a href="#"><img src="assets/images/shop/product-13.jpg" alt="Men’s Casual Pack"/></a></td>
-                      <td>
-                        <h5 class="product-title font-alt">Fleur D'Argent - MIU MIU</h5>
-                      </td>
-                      <td class="hidden-xs">
-                        <h5 class="product-title font-alt">$77.000</h5>
-                      </td>
-                      <td>
-                        <input class="form-control" type="number" name="" value="1" max="50" min="1"/>
-                      </td>
-                      <td>
-                        <h5 class="product-title font-alt">$77.00</h5>
-                      </td>
-                      <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-3">
-                <div class="form-group">
-                  <input class="form-control" type="text" id="" name="" placeholder="Coupon code"/>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="form-group">
-                  <button class="btn btn-round btn-g" type="submit">Apply</button>
-                </div>
-              </div>
-              <div class="col-sm-3 col-sm-offset-3">
-                <div class="form-group">
-                  <button class="btn btn-block btn-round btn-d pull-right" type="submit">Update Cart</button>
-                </div>
-              </div>
-            </div>
-            <hr class="divider-w">
-            <div class="row mt-70">
-              <div class="col-sm-5 col-sm-offset-7">
-                <div class="shop-Cart-totalbox">
-                  <h4 class="font-alt">Cart Totals</h4>
-                  <table class="table table-striped table-border checkout-table">
-                    <tbody>
-                      <tr>
-                        <th>Cart Subtotal :</th>
-                        <td>$105.00</td>
-                      </tr>
-                      <tr>
-                        <th>Shipping Total :</th>
-                        <td>$2.00</td>
-                      </tr>
-                      <tr class="shop-Cart-totalprice">
-                        <th>Total :</th>
-                        <td>$107.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <button class="btn btn-lg btn-block btn-round btn-d" type="submit"><a href="billing.html">Proceed to Checkout</a></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
+        <div class="container">
+<div class="row">
+<!-- You can make it whatever width you want. I'm making it full width
+on <= small devices and 4/12 page width on >= medium devices -->
+<div class="col-xs-12 col-md-4">
+
+
+<!-- CREDIT CARD FORM STARTS HERE -->
+<div class="panel panel-default credit-card-box">
+<div class="panel-heading display-table" >
+<div class="row display-tr" >
+<h3 class="panel-title display-td" >Payment Details</h3>
+<div class="display-td" >
+<img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+</div>
+</div>
+</div>
+<div class="panel-body">
+<form role="form" id="payment-form">
+<div class="row">
+<div class="col-xs-12">
+<div class="form-group">
+<label for="cardNumber">CARD NUMBER</label>
+<div class="input-group">
+<input
+type="tel"
+class="form-control"
+name="cardNumber"
+placeholder="Valid Card Number"
+autocomplete="cc-number"
+required autofocus
+/>
+<span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-7 col-md-7">
+<div class="form-group">
+<label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+<input
+type="tel"
+class="form-control"
+name="cardExpiry"
+placeholder="MM / YY"
+autocomplete="cc-exp"
+required
+/>
+</div>
+</div>
+<div class="col-xs-5 col-md-5 pull-right">
+<div class="form-group">
+<label for="cardCVC">CV CODE</label>
+<input
+type="tel"
+class="form-control"
+name="cardCVC"
+placeholder="CVC"
+autocomplete="cc-csc"
+required
+/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="form-group">
+<label for="couponCode">COUPON CODE</label>
+<input type="text" class="form-control" name="couponCode" />
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<button class="btn btn-success btn-lg btn-block" type="submit">Complete Payment</button>
+</div>
+</div>
+<div class="row" style="display:none;">
+<div class="col-xs-12">
+<p class="payment-errors"></p>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- CREDIT CARD FORM ENDS HERE -->
+
+
+</div>
+
+
+
+</div>
+</div>
+
+	<!-- If you're using Stripe for payments -->
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
