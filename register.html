@@ -54,6 +54,45 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '292550071543127',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.1'
+        });
+
+        FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+       function statusChangeCallback(response){
+         if(response.status === 'connected'){
+           console.log('Logged in and authenticared');
+         } else {
+           console.log('Not authenticared');
+         }
+       }
+
+
+      function checkLoginState() {
+         FB.getLoginStatus(function(response) {
+         statusChangeCallback(response);
+         });
+       }
+    </script>
+
     <main>
       <div class="page-loader">
         <div class="loader">Loading...</div>
@@ -394,6 +433,12 @@
 <button class="loginBtn loginBtn--google">
   Login with Google
 </button>
+
+
+<fb:login-button
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
                 <hr class="divider-w mb-10">
                 <form class="form">
                   <div class="form-group">
