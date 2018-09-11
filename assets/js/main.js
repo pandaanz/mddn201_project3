@@ -606,8 +606,8 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         // When the window has finished loading create our google map below
         google.maps.event.addDomListener(window, 'load', init);
 
-        var mkr = new google.maps.LatLng(-41.294846, 174.776203);
-        var cntr = (mobileTest) ? mkr : new google.maps.LatLng(-41.294846, 174.776203);
+        var mkr = new google.maps.LatLng(-41.2953356, 174.7756338,19z);
+        var cntr = (mobileTest) ? mkr : new google.maps.LatLng(-41.2953356, 174.7756338,19z);
 
         function init() {
             // Basic options for a simple Google Map
