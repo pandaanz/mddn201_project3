@@ -40,6 +40,7 @@ iframe {
   left: auto !important;
 }
 
+
 /* Transition elsements */
 a,
 .btn {
@@ -3054,4 +3055,10 @@ Google map
 /* Just looks nicer */
 .credit-card-box .panel-heading img {
     min-width: 180px;
+}
+
+.paypal-box {
+  position: absolute;
+  left: 150%;
+  top: 25%;
 }
